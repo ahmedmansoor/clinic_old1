@@ -18,4 +18,5 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/appointments', [AppointmentController::class, 'index'])->name('appointments');
     Route::get('/patients', [PatientController::class, 'index'])->name('patients');
     Route::get('/doctors', [DoctorController::class, 'index'])->name('doctors');
+    Route::get('/users', [HomeController::class, 'home'])->name('users');
 });

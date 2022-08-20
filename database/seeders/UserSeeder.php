@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -17,7 +18,16 @@ class UserSeeder extends Seeder
     public function run()
     {
         $users = [
-            ['name' => 'A', 'email' => 'a@g.com', 'password' => bcrypt('123456'), 'remember_token' => Str::random(10)],
+            [
+                'name' => 'Admin',
+                'user_status_id' => '1',
+                'nid' => 'A010101',
+                'phone_number' => '9999999',
+                'email' => 'admin@gmail.com',
+                'dob' => Carbon::yesterday(),
+                'password' => bcrypt('Admin321*'),
+                'remember_token' => Str::random(10)
+            ],
         ];
 
         foreach ($users as $user) {

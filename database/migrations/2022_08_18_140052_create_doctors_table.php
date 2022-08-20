@@ -15,13 +15,9 @@ return new class extends Migration
     {
         Schema::create('doctors', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('speciality_id')->constrained('specialities');
-            $table->string('name');
-            $table->string('nid')->unique()->nullable();
-            $table->string('emergency_name')->nullable();
-            $table->string('emergency_mobile')->nullable();
-            $table->string('mobile')->unique()->nullable();
-            $table->string('email')->unique()->nullable();
+            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('specialty_id')->constrained('specialties');
+            $table->string('registration_number');
             $table->timestamps();
         });
     }

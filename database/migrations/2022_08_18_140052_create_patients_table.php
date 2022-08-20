@@ -16,19 +16,19 @@ return new class extends Migration
         Schema::create('patients', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('nid')->unique()->nullable();
+            $table->string('nid')->unique();
             $table->string('address')->nullable();
             $table->string('island')->nullable();
             $table->string('atoll')->nullable();
             $table->string('country')->nullable();
+            $table->string('phone_number')->unique();
+            $table->string('email')->unique();
+            $table->date('dob');
             $table->unsignedBigInteger('marital_status')->nullable();
+            $table->string('emergency_contact')->nullable();
+            $table->string('emergency_contact_number')->nullable();
             $table->string('drug_allergies')->nullable();
             $table->string('food_allergies')->nullable();
-            $table->string('emergency_name')->nullable();
-            $table->string('emergency_mobile')->nullable();
-            $table->string('mobile')->unique()->nullable();
-            $table->string('email')->unique()->nullable();
-            $table->date('dob')->nullable();
             $table->timestamps();
         });
     }

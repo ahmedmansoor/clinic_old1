@@ -13,14 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('appointments', function (Blueprint $table) {
+        Schema::create('lab_requests', function (Blueprint $table) {
             $table->id();
             $table->foreignId('patient_id')->constrained('patients');
-            $table->foreignId('doctor_id')->constrained('doctors');
-            $table->foreignId('room_id')->constrained('rooms');
-            $table->dateTime('time_set');
-            $table->dateTime('time_in');
-            $table->dateTime('time_out');
+            $table->foreignId('report_status_id')->constrained('report_statuses');
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -32,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('appointments');
+        Schema::dropIfExists('lab_requests');
     }
 };
