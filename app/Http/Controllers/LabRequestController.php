@@ -14,7 +14,7 @@ class LabRequestController extends Controller
      */
     public function index()
     {
-        //
+        return inertia('Laboratory');
     }
 
     /**

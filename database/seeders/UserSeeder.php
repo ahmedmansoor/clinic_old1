@@ -20,6 +20,7 @@ class UserSeeder extends Seeder
         $users = [
             [
                 'name' => 'Admin',
+                'user_role_id' => '2',
                 'user_status_id' => '1',
                 'nid' => 'A010101',
                 'phone_number' => '9999999',

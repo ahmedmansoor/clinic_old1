@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Scan;
+use App\Models\UserRole;
 use Illuminate\Http\Request;
 
-class ScanController extends Controller
+class UserRoleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class ScanController extends Controller
      */
     public function index()
     {
-        return inertia('Scans');
+        //
     }
 
     /**
@@ -41,10 +41,10 @@ class ScanController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Scan  $scan
+     * @param  \App\Models\UserRole  $userRole
      * @return \Illuminate\Http\Response
      */
-    public function show(Scan $scan)
+    public function show(UserRole $userRole)
     {
         //
     }
@@ -52,10 +52,10 @@ class ScanController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Scan  $scan
+     * @param  \App\Models\UserRole  $userRole
      * @return \Illuminate\Http\Response
      */
-    public function edit(Scan $scan)
+    public function edit(UserRole $userRole)
     {
         //
     }
@@ -64,10 +64,10 @@ class ScanController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Scan  $scan
+     * @param  \App\Models\UserRole  $userRole
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Scan $scan)
+    public function update(Request $request, UserRole $userRole)
     {
         //
     }
@@ -75,10 +75,10 @@ class ScanController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Scan  $scan
+     * @param  \App\Models\UserRole  $userRole
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Scan $scan)
+    public function destroy(UserRole $userRole)
     {
         //
     }

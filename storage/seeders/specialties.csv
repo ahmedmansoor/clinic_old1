@@ -1,0 +1,147 @@
+line_id,name
+1,Anesthesiologist
+1,Anesthesiology Fellow
+1,Certified Registered Nurse Anesthetist
+1,Registered Respiratory Therapist
+1,Anesthesiologist Assistant
+2,Cardiologist
+2,Cardiology Fellow
+2,Cardiology Physician Assistant
+2,Cardiac Scientist
+2,Cardiovascular Technologist
+3,Intensivist
+3,Neonatologist
+3,Critical Care Medicine Physician Assistant
+3,Critical Care Nurse Practitioner
+3,Critical Care Registered Nurse
+3,Critical Care Respiratory Therapist
+4,Dentist
+4,Dental Hygienist
+4,Dental Assistant
+4,Dental Technician
+5,Dermatologist
+5,Dermatology Physician Assistant
+6,Emergency Physician
+6,Emergency Physician Assistant
+6,Emergency Nurse Practitioner
+6,Flight Nurse
+6,Certified Emergency Registered Nurse
+6,Certified Emergency Registered Respiratory Therapist
+6,Emergency Medical Technician - Critical Care Paramedic
+6, Emergency Medical Technician - Paramedic
+6,Emergency Medical Technician - Intermediate 99
+6,Emergency Medical Technician - Intermediate 85
+6,Emergency Medical Technician - Basic
+7,Endocrinologist
+7,Endocrinology Physician Assistant
+8,Gastroenterologist
+8,Gastroenterology Physician Assistant
+9,Genetic Counselor
+10,Geriatrician
+10,Geriatric Medicine Physician Assistant
+10,Gerontological Nurse Practitioner
+10,Occupational Therapist
+11,Haematologist
+11,Haematology Physician Assistant
+11,Medical Laboratory Technician
+11,Phlebotomist
+12,Nephrologist
+12,Nephrology Physician Assistant
+12,Dialysis Technician
+13,Neurologist
+13,Neurology Physician assistant
+13,Occupational Therapist
+13,Speech Language Pathologist
+13,Audiologist
+13,Neuropsychologist
+14,Oncologist
+14,Oncology Physician Assistant
+14,Radiation Therapist
+15,Ophthalmologist
+15,Eye Surgery
+16,Optometrist
+16,Occupational Therapist- Low Vision Rehab
+17,"Otolaryngologist (Ear, Nose and Throat Physician)"
+17,Otorhinolaryngology Physician assistant
+18,Healthcare Chaplain
+19,Pathologist
+20,Pulmonologist
+20,Pulmonology/Respirology Physician Assistant
+20,Registered Respiratory Therapist
+21,General Practitioner
+21,Primary Care Physician
+21,Internist
+21,Physician Assistant
+21,Family Nurse Practitioner
+21,Pharmacist
+21,Community Health practitioner
+22,Neonatologist
+22,Pediatrician
+22,Pediatric Physician Assistant
+22,Neonatal Nurse Practitioner
+22,Pediatric Nurse Practitioner
+22,Occupational Therapist - Neonatal/Pediatric
+22,Pediatric Nurse
+22,Pediatric Respiratory Therapist
+23,Pharmacist
+23,Pharmacy technician
+24,Podiatric Surgeon
+24,Doctor of Podiatric Medicine
+24,Podiatrist
+24,Chiropodist
+25,Psychiatrist
+25,Psychiatry Physician Assistant
+25,Psychologist
+25,Psychiatric Nurse Practitioner
+25,Mental Health Nurse Practitioner
+25,Occupational Therapist
+25,Social Worker
+25,Mental Health Counselor
+26,Medical Officer of Health
+26,Environmental Health Officer
+26,Epidemiologist
+26,Public Health Nurse
+27,Orthopedic Physician
+27,Orthopaedic Physicians Assistant
+27,Sport Psychologist
+27,Physical Therapist
+27,Occupational Therapist
+27,Physical Therapy Assistant
+27,Occupational Therapy Assistant
+27,Orthopaedic Technologist
+27,Prosthetist
+27,Orthotist
+27,Chiropractor
+27,Biokineticist
+27,Athletic Trainer
+27,Yoga Instructor
+27,Massage Therapist
+28,Radiologist
+28,Radiology Physician Assistant
+28,Radiotherapist
+28,Radiographer
+28,CT Radiographer
+28,Interventional Radiographer
+28,Mammographer
+28,Neuroradiographer
+28,Medical Dosimetry Technologist
+28,Radiologist Practitioner Assistant
+28,Reporting Radiographer
+28,Sonographer
+29,Obstetrician
+29,Gynaecologist
+29,OB/GYN Physician Assistant
+29,Women's Health Nurse Practitioner
+29,Nurse-Midwife
+29,Midwife
+29,Lactation consultant
+30,General Doctor
+30,Bariatric Surgeon
+30,Cardiothoracic surgeon
+30,Cardiac Surgeon
+30,Hepatic Biliary Pancreatic Surgeon
+30,Neurosurgeon
+30,Podiatric Surgeon
+30,Surgery Physician Assistant
+31,Urologist
+31,Urology Physician Assistant

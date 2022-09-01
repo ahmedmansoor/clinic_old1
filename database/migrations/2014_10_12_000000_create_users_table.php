@@ -16,12 +16,15 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_role_id')->constrained('user_roles');
             $table->foreignId('user_status_id')->constrained('user_statuses');
             $table->string('name');
             $table->string('nid')->unique();
             $table->string('address')->nullable();
+            $table->string('street')->nullable();
             $table->string('island')->nullable();
             $table->string('atoll')->nullable();
+            $table->string('city')->nullable();
             $table->string('country')->nullable();
             $table->string('phone_number')->unique();
             $table->string('email')->unique();
@@ -33,6 +36,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->foreignId('patient_id')->constrained('patients');
             $table->string('details')->nullable();
             $table->string('recipe')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

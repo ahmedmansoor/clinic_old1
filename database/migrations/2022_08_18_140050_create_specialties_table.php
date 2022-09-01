@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->foreignId('line_id')->constrained('lines');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

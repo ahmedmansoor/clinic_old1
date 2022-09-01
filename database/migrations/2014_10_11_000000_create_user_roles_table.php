@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        // Schema::create('hours', function (Blueprint $table) {
-        //     $table->id();
-        //     $table->timestamps();
-        // });
+        Schema::create('user_roles', function (Blueprint $table) {
+            $table->id();
+            $table->string('name')->unique();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hours');
+        Schema::dropIfExists('user_roles');
     }
 };

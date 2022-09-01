@@ -29,6 +29,7 @@ return new class extends Migration
             $table->string('emergency_contact_number')->nullable();
             $table->string('drug_allergies')->nullable();
             $table->string('food_allergies')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

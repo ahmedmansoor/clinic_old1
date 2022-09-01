@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Scan;
+use App\Models\Session;
 use Illuminate\Http\Request;
 
-class ScanController extends Controller
+class SessionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class ScanController extends Controller
      */
     public function index()
     {
-        return inertia('Scans');
+        // return inertia('Sessions');
+
     }
 
     /**
@@ -35,16 +36,16 @@ class ScanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd('win');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Scan  $scan
+     * @param  \App\Models\Session  $session
      * @return \Illuminate\Http\Response
      */
-    public function show(Scan $scan)
+    public function show(Session $session)
     {
         //
     }
@@ -52,10 +53,10 @@ class ScanController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Scan  $scan
+     * @param  \App\Models\Session  $session
      * @return \Illuminate\Http\Response
      */
-    public function edit(Scan $scan)
+    public function edit(Session $session)
     {
         //
     }
@@ -64,10 +65,10 @@ class ScanController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Scan  $scan
+     * @param  \App\Models\Session  $session
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Scan $scan)
+    public function update(Request $request, Session $session)
     {
         //
     }
@@ -75,10 +76,10 @@ class ScanController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Scan  $scan
+     * @param  \App\Models\Session  $session
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Scan $scan)
+    public function destroy(Session $session)
     {
         //
     }

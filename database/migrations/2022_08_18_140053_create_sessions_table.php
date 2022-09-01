@@ -13,14 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('appointments', function (Blueprint $table) {
+        Schema::create('sessions', function (Blueprint $table) {
             $table->id();
             $table->foreignId('doctor_id')->constrained('doctors');
-            $table->foreignId('patient_id')->constrained('patients');
-            $table->foreignId('room_id')->constrained('rooms');
-            // $table->dateTime('time_set');
-            $table->dateTime('time_in');
-            $table->dateTime('time_out');
+            $table->foreignId('user_id')->constrained('users');
+            $table->dateTime('time_start');
+            $table->dateTime('time_end');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
@@ -32,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('appointments');
+        Schema::dropIfExists('sessions');
     }
 };

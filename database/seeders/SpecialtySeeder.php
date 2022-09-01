@@ -15,6 +15,26 @@ class SpecialtySeeder extends Seeder
      */
     public function run()
     {
-        Specialty::factory(10)->create();
+        // Specialty::factory(10)->create();
+        // Specialty::truncate();
+
+        $path = storage_path('seeders') . DIRECTORY_SEPARATOR . 'specialties.csv';
+        $csvFile = fopen($path, "r");
+
+        $firstline = true;
+        while (($data = fgetcsv(
+            $csvFile,
+            1000,
+            ","
+        )) !== FALSE) {
+            if (!$firstline) {
+                Specialty::create([
+                    'line_id' => $data['0'],
+                    'name' => $data['1'],
+                ]);
+            }
+            $firstline = false;
+        }
+        fclose($csvFile);
     }
 }

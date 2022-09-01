@@ -15,6 +15,25 @@ class LineSeeder extends Seeder
      */
     public function run()
     {
-        Line::factory(10)->create();
+        // Line::factory(10)->create();
+        // Line::truncate();
+
+        $path = storage_path('seeders') . DIRECTORY_SEPARATOR . 'lines.csv';
+        $csvFile = fopen($path, "r");
+
+        $firstline = true;
+        while (($data = fgetcsv(
+            $csvFile,
+            1000,
+            ","
+        )) !== FALSE) {
+            if (!$firstline) {
+                Line::create([
+                    'name' => $data['0'],
+                ]);
+            }
+            $firstline = false;
+        }
+        fclose($csvFile);
     }
 }

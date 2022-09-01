@@ -15,6 +15,16 @@ class UserStatusSeeder extends Seeder
      */
     public function run()
     {
-        UserStatus::factory(3)->create();
+        // UserStatus::factory(3)->create();
+        $statuses = [
+            ['name' => 'new'],
+            ['name' => 'active'],
+            ['name' => 'inactive'],
+            ['name' => 'dismissed'],
+        ];
+
+        foreach ($statuses as $status) {
+            UserStatus::create($status);
+        }
     }
 }
