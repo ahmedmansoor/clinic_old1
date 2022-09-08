@@ -16,11 +16,12 @@ class UserRoleSeeder extends Seeder
     public function run()
     {
         $roles = [
-            ['name' => 'super-admin'],
-            ['name' => 'admin'],
-            ['name' => 'doctor'],
-            ['name' => 'desk'],
-            ['name' => 'patient'],
+            ['name' => 'super-admin'], //1
+            ['name' => 'admin'], //2
+            ['name' => 'doctor'], //3
+            ['name' => 'desk'], //4
+            ['name' => 'patient'], //5
+            ['name' => 'unset'], //6
         ];
 
         foreach ($roles as $role) {

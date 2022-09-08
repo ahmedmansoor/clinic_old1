@@ -21631,10 +21631,28 @@ var _hoisted_5 = {
 var _hoisted_6 = {
   "class": "relative"
 };
+var _hoisted_7 = {
+  key: 0,
+  "class": "text-green-600 bg-green-100 rounded p-1 px-2"
+};
+var _hoisted_8 = {
+  key: 1,
+  "class": "text-blue-600 bg-blue-100 rounded p-1 px-2"
+};
+var _hoisted_9 = {
+  key: 2,
+  "class": "text-red-600 bg-red-100 rounded p-1 px-2"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Nav = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Nav");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("aside", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Nav)])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default")])])]);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("aside", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Nav)])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_6, [_ctx.$page.props.flash.success ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.$page.props.flash.success), 1
+  /* TEXT */
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _ctx.$page.props.flash.info ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.$page.props.flash.info), 1
+  /* TEXT */
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _ctx.$page.props.flash.error ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.$page.props.flash.error), 1
+  /* TEXT */
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default")])])]);
 }
 
 /***/ }),
@@ -21992,7 +22010,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       render: function render() {
         return (0,vue__WEBPACK_IMPORTED_MODULE_0__.h)(App, props);
       }
-    }).use(plugin).component("Head", _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__.Head).component("Link", _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__.Link).mount(el);
+    }).use(plugin).mixin({
+      methods: {
+        route: route
+      }
+    }).component("Head", _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__.Head).component("Link", _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__.Link).mount(el);
   },
   title: function title(_title) {
     return "CMS: ".concat(_title);
@@ -29777,21 +29799,29 @@ var map = {
 		"./resources/js/Pages/Dashboard.vue",
 		"resources_js_Pages_Dashboard_vue"
 	],
-	"./Doctor/Create": [
-		"./resources/js/Pages/Doctor/Create.vue",
-		"resources_js_Pages_Doctor_Create_vue"
+	"./Doctors/Create": [
+		"./resources/js/Pages/Doctors/Create.vue",
+		"resources_js_Pages_Doctors_Create_vue"
 	],
-	"./Doctor/Create.vue": [
-		"./resources/js/Pages/Doctor/Create.vue",
-		"resources_js_Pages_Doctor_Create_vue"
+	"./Doctors/Create.vue": [
+		"./resources/js/Pages/Doctors/Create.vue",
+		"resources_js_Pages_Doctors_Create_vue"
 	],
-	"./Doctors": [
-		"./resources/js/Pages/Doctors.vue",
-		"resources_js_Pages_Doctors_vue"
+	"./Doctors/Index": [
+		"./resources/js/Pages/Doctors/Index.vue",
+		"resources_js_Pages_Doctors_Index_vue"
 	],
-	"./Doctors.vue": [
-		"./resources/js/Pages/Doctors.vue",
-		"resources_js_Pages_Doctors_vue"
+	"./Doctors/Index.vue": [
+		"./resources/js/Pages/Doctors/Index.vue",
+		"resources_js_Pages_Doctors_Index_vue"
+	],
+	"./Doctors/_Create": [
+		"./resources/js/Pages/Doctors/_Create.vue",
+		"resources_js_Pages_Doctors__Create_vue"
+	],
+	"./Doctors/_Create.vue": [
+		"./resources/js/Pages/Doctors/_Create.vue",
+		"resources_js_Pages_Doctors__Create_vue"
 	],
 	"./Laboratory": [
 		"./resources/js/Pages/Laboratory.vue",
@@ -29801,13 +29831,29 @@ var map = {
 		"./resources/js/Pages/Laboratory.vue",
 		"resources_js_Pages_Laboratory_vue"
 	],
-	"./Patients": [
-		"./resources/js/Pages/Patients.vue",
-		"resources_js_Pages_Patients_vue"
+	"./Patients/Create": [
+		"./resources/js/Pages/Patients/Create.vue",
+		"resources_js_Pages_Patients_Create_vue"
 	],
-	"./Patients.vue": [
-		"./resources/js/Pages/Patients.vue",
-		"resources_js_Pages_Patients_vue"
+	"./Patients/Create.vue": [
+		"./resources/js/Pages/Patients/Create.vue",
+		"resources_js_Pages_Patients_Create_vue"
+	],
+	"./Patients/Edit": [
+		"./resources/js/Pages/Patients/Edit.vue",
+		"resources_js_Pages_Patients_Edit_vue"
+	],
+	"./Patients/Edit.vue": [
+		"./resources/js/Pages/Patients/Edit.vue",
+		"resources_js_Pages_Patients_Edit_vue"
+	],
+	"./Patients/Index": [
+		"./resources/js/Pages/Patients/Index.vue",
+		"resources_js_Pages_Patients_Index_vue"
+	],
+	"./Patients/Index.vue": [
+		"./resources/js/Pages/Patients/Index.vue",
+		"resources_js_Pages_Patients_Index_vue"
 	],
 	"./Scans": [
 		"./resources/js/Pages/Scans.vue",
@@ -29966,7 +30012,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_Pages_AddGuest_vue":1,"resources_js_Pages_Appointments_vue":1,"resources_js_Pages_Configuration_vue":1,"resources_js_Pages_Dashboard_vue":1,"resources_js_Pages_Doctor_Create_vue":1,"resources_js_Pages_Doctors_vue":1,"resources_js_Pages_Laboratory_vue":1,"resources_js_Pages_Patients_vue":1,"resources_js_Pages_Scans_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_Pages_AddGuest_vue":1,"resources_js_Pages_Appointments_vue":1,"resources_js_Pages_Configuration_vue":1,"resources_js_Pages_Dashboard_vue":1,"resources_js_Pages_Doctors_Create_vue":1,"resources_js_Pages_Doctors_Index_vue":1,"resources_js_Pages_Doctors__Create_vue":1,"resources_js_Pages_Laboratory_vue":1,"resources_js_Pages_Patients_Create_vue":1,"resources_js_Pages_Patients_Edit_vue":1,"resources_js_Pages_Patients_Index_vue":1,"resources_js_Pages_Scans_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

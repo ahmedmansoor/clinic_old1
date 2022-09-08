@@ -11,6 +11,7 @@ use Carbon\Carbon;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class DoctorController extends Controller
 {
@@ -21,7 +22,13 @@ class DoctorController extends Controller
      */
     public function index()
     {
-        return inertia('Doctors');
+        // $doctors = Doctor::latest()->paginate(5);
+        // $doctors->load('user');
+        // dd($doctors);
+
+        $doctors = Doctor::with('user')->paginate(5);
+
+        return inertia('Doctors/Index', ['doctors' => $doctors]);
     }
 
     /**
@@ -31,7 +38,7 @@ class DoctorController extends Controller
      */
     public function create()
     {
-        return inertia('Doctor/Create');
+        return inertia('Doctors/Create');
     }
 
     /**
@@ -40,15 +47,8 @@ class DoctorController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    // public function store(Request $request)
-    public function store(StoreDoctorRequest $request)
+    public function store(Request $request)
     {
-        // $request->validate([
-        //     'name' => 'required|string|max:255',
-        //     'email' => 'required|email|unique:users,email',
-
-        // ]);
-
         try {
             DB::beginTransaction();
             User::create([
@@ -56,15 +56,16 @@ class DoctorController extends Controller
                 'user_status_id' => UserStatus::NEW,
                 'name' => $request->name,
                 'nid' => $request->nid,
+                'gender' => $request->gender,
                 'address' => $request->address,
                 'island' => $request->island,
                 'atoll' => $request->atoll,
+                'city' => $request->city,
                 'country' => $request->country,
                 'phone_number' => $request->phone_number,
                 'email' => $request->email,
                 'dob' => $request->dob,
                 'marital_status' => $request->marital_status,
-                'country' => $request->country,
                 'emergency_contact' => $request->emergency_contact,
                 'emergency_contact_number' => $request->emergency_contact_number,
                 'password' => 'Doctor321*'
@@ -79,10 +80,10 @@ class DoctorController extends Controller
             DB::commit();
             return back()->with('success', 'Doctor Added Successfully');
         } catch (Exception $e) {
-            // dd($e->getMessage());
+            dd($e);
             DB::rollBack();
-            // return response()->json($e->getMessage(), 422);
-            return back()->with('error', $e->getMessage());
+            // Log::info($e->getMessage());
+            return back()->with('error', 'An error occurred');
         }
     }
 

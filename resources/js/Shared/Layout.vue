@@ -15,6 +15,15 @@
         </aside>
         <div class="main-content flex flex-col flex-grow m-5 mt-16 max-w-7xl">
             <section class="relative">
+                <div v-if="$page.props.flash.success" class="text-green-600 bg-green-100 rounded p-1 px-2">
+                    {{ $page.props.flash.success }}
+                </div>
+                <div v-if="$page.props.flash.info" class="text-blue-600 bg-blue-100 rounded p-1 px-2">
+                    {{ $page.props.flash.info }}
+                </div>
+                <div v-if="$page.props.flash.error" class="text-red-600 bg-red-100 rounded p-1 px-2">
+                    {{ $page.props.flash.error }}
+                </div>
                 <slot />
             </section>
         </div>

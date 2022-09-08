@@ -1,6 +1,5 @@
 <script setup>
 import { useForm } from '@inertiajs/inertia-vue3';
-import axios from 'axios';
 import { ref } from 'vue';
 import ValidationErrors from '@/Shared/ValidationErrors.vue';
 
@@ -10,12 +9,9 @@ const components = {
 
 const form = useForm({
     name: '',
-    user_role_id: '',
-    user_status_id: '',
-    name: '',
     nid: '',
+    gender: '',
     address: '',
-    street: '',
     island: '',
     atoll: '',
     city: '',
@@ -26,35 +22,15 @@ const form = useForm({
     marital_status: '',
     emergency_contact: '',
     emergency_contact_number: '',
-    last_login: '',
-    password: '',
-    specialty_id: '',
-    registration_number: '',
+    drug_allergies: '',
+    food_allergies: '',
 });
 
-// const errors = [];
-// const errors = ref();
+const errors = ref();
 
-const addDoctor = () => {
+const submit = () => {
     form.post('store');
 }
-
-
-// const addDoctor = () => {
-//     axios.post('store', form)
-//         .then(response => {
-//             // console.log(response)
-//             // alert(response);
-//             alert('Doctor added');
-//             errors.value = null;
-//             }).catch(error => {
-//             // console.log('sdsds')
-//             // console.log(error.response.data.errors);
-//                 if (error.response.status === 422) {
-//                     errors.value = error.response.data.errors;
-//                 } 
-//             });
-// }
 
 </script>
 
@@ -67,7 +43,7 @@ const addDoctor = () => {
         </div>
     </div>
     <div>
-        <form @submit.prevent="addDoctor">
+        <form @submit.prevent="submit">
         <!-- <form @submit.prevent="form.post(route('doctors.store'))"> -->
             <div>
                 <h3>Personal Information</h3>
@@ -97,17 +73,15 @@ const addDoctor = () => {
                         {{ form.errors.nid }}
                     </div>
                 </div>
-                 <!-- registration_number -->
+                 <!-- Gender -->
                 <div class="mb-6">
-                    <label for="registration_number" class="text-sm">Registration No.</label>
-                    <input
-                        type="text"
-                        v-model="form.registration_number"
-                        class="w-full"
-                        placeholder="Registration No."
-                    />
-                    <div v-if="form.errors.registration_number" class="text-red-600 text-sm">
-                        {{ form.errors.registration_number }}
+                    <label for="Gender" class="text-sm">Gender</label>
+                    <select name="gender" id="gender" v-model="form.gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    <div v-if="form.errors.gender" class="text-red-600 text-sm">
+                        {{ form.errors.gender }}
                     </div>
                 </div>
             </div>
@@ -119,15 +93,13 @@ const addDoctor = () => {
                         Phone No.
                     </label>
                     <input
-                        type="text"
+                        type="number"
                         v-model="form.phone_number"
                         class="w-full"
                         placeholder="Phone No."
                     />
                     <div
-                        v-if="form.errors.phone_number"
-                        class="text-red-600 text-sm"
-                    >
+                        v-if="form.errors.phone_number" class="text-red-600 text-sm">
                         {{ form.errors.phone_number }}
                     </div>
                 </div>
@@ -137,7 +109,7 @@ const addDoctor = () => {
                         Email Address
                     </label>
                     <input
-                        type="text"
+                        type="email"
                         v-model="form.email"
                         class="w-full"
                         placeholder="Email Address"

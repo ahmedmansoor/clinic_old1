@@ -2171,8 +2171,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 /* harmony import */ var _Shared_ValidationErrors_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/Shared/ValidationErrors.vue */ "./resources/js/Shared/ValidationErrors.vue");
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 
 
 
@@ -2180,18 +2178,33 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'Create',
   setup: function setup(__props, _ref) {
-    var _useForm;
-
     var expose = _ref.expose;
     expose();
     var components = {
       ValidationErrors: _Shared_ValidationErrors_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
     };
-    var form = (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__.useForm)((_useForm = {
+    var form = (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__.useForm)({
       name: '',
       user_role_id: '',
-      user_status_id: ''
-    }, _defineProperty(_useForm, "name", ''), _defineProperty(_useForm, "nid", ''), _defineProperty(_useForm, "address", ''), _defineProperty(_useForm, "street", ''), _defineProperty(_useForm, "island", ''), _defineProperty(_useForm, "atoll", ''), _defineProperty(_useForm, "city", ''), _defineProperty(_useForm, "country", ''), _defineProperty(_useForm, "phone_number", ''), _defineProperty(_useForm, "email", ''), _defineProperty(_useForm, "dob", ''), _defineProperty(_useForm, "marital_status", ''), _defineProperty(_useForm, "emergency_contact", ''), _defineProperty(_useForm, "emergency_contact_number", ''), _defineProperty(_useForm, "last_login", ''), _defineProperty(_useForm, "password", ''), _defineProperty(_useForm, "specialty_id", ''), _defineProperty(_useForm, "registration_number", ''), _useForm)); // const errors = [];
+      user_status_id: '',
+      nid: '',
+      address: '',
+      street: '',
+      island: '',
+      atoll: '',
+      city: '',
+      country: '',
+      phone_number: '',
+      email: '',
+      dob: '',
+      marital_status: '',
+      emergency_contact: '',
+      emergency_contact_number: '',
+      last_login: '',
+      password: '',
+      specialty_id: '',
+      registration_number: ''
+    }); // const errors = [];
     // const errors = ref();
 
     var addDoctor = function addDoctor() {

@@ -17,9 +17,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('nid')->unique();
+            $table->enum('gender', ['male', 'female']);
             $table->string('address')->nullable();
             $table->string('island')->nullable();
             $table->string('atoll')->nullable();
+            $table->string('city')->nullable();
             $table->string('country')->nullable();
             $table->string('phone_number')->unique();
             $table->string('email')->unique();

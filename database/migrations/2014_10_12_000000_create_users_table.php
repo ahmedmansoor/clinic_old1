@@ -16,10 +16,11 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_role_id')->constrained('user_roles');
+            $table->foreignId('user_role_id')->constrained('user_roles')->default(6);
             $table->foreignId('user_status_id')->constrained('user_statuses');
             $table->string('name');
             $table->string('nid')->unique();
+            $table->enum('gender', ['male', 'female']);
             $table->string('address')->nullable();
             $table->string('street')->nullable();
             $table->string('island')->nullable();

@@ -22,8 +22,20 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/appointments', [AppointmentController::class, 'index'])->name('appointments');
 
-    // 
-    Route::get('/patients', [PatientController::class, 'index'])->name('patients');
+    // Patients
+    Route::resource('patients', PatientController::class);
+    // Route::name('patients.')
+    //     ->prefix('patients')
+    //     ->group(
+    //         function () {
+    //             Route::get('/', [PatientController::class, 'index'])->name('index');
+    //             Route::get('/create', [PatientController::class, 'create'])->name('create');
+    //             Route::post('/store', [PatientController::class, 'store'])->name('store');
+    //             Route::get('/{id}/edit', [PatientController::class, 'edit'])->name('edit');
+    //             Route::post('/{id/update', [PatientController::class, 'update'])->name('update');
+    //             Route::delete('/destroy/{id}', [PatientController::class, 'destroy'])->name('destroy');
+    //         }
+    //     );
 
     // 
     Route::get('/laboratory', [LabRequestController::class, 'index'])->name('laboratory');
@@ -35,15 +47,17 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/users', [HomeController::class, 'home'])->name('users');
 
     // Doctors
-    Route::name('doctors.')
-        ->prefix('doctors')
-        ->group(
-            function () {
-                Route::get('/', [DoctorController::class, 'index'])->name('index');
-                Route::get('/create', [DoctorController::class, 'create'])->name('create');
-                Route::post('/store', [DoctorController::class, 'store'])->name('store');
-            }
-        );
+    Route::resource('doctors', DoctorController::class);
+
+    // Route::name('doctors.')
+    //     ->prefix('doctors')
+    //     ->group(
+    //         function () {
+    //             Route::get('/', [DoctorController::class, 'index'])->name('index');
+    //             Route::get('/create', [DoctorController::class, 'create'])->name('create');
+    //             Route::post('/store', [DoctorController::class, 'store'])->name('store');
+    //         }
+    //     );
 
     // 
     Route::get('/sessions', [SessionController::class, 'index'])->name('sessions');

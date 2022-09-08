@@ -3,6 +3,8 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\Authenticatable;
+
+use Carbon\Carbon;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -25,6 +27,7 @@ class User extends Authenticatable
         'user_status_id',
         'name',
         'nid',
+        'gender',
         'address',
         'street',
         'island',
@@ -52,6 +55,14 @@ class User extends Authenticatable
     ];
 
     /**
+     * Accessor for Age.
+     */
+    public function age()
+    {
+        return Carbon::parse($this->attributes['dob'])->age;
+    }
+
+    /**
      * The attributes that should be cast.
      *
      * @var array<string, string>
@@ -59,4 +70,19 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Accessor for Age.
+     */
+    protected $appends = ['age', 'month'];
+
+    public function getMonthAttribute()
+    {
+        return Carbon::parse($this->dob)->diffInMonths();
+    }
+
+    public function getAgeAttribute()
+    {
+        return Carbon::parse($this->dob)->age;
+    }
 }

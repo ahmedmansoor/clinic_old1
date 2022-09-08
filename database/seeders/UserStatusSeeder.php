@@ -17,10 +17,11 @@ class UserStatusSeeder extends Seeder
     {
         // UserStatus::factory(3)->create();
         $statuses = [
-            ['name' => 'new'],
-            ['name' => 'active'],
-            ['name' => 'inactive'],
-            ['name' => 'dismissed'],
+            ['name' => 'new'], //1
+            ['name' => 'active'], //2
+            ['name' => 'inactive'], //3
+            ['name' => 'dismissed'], //4
+            ['name' => 'unset'], //5
         ];
 
         foreach ($statuses as $status) {

@@ -23,6 +23,7 @@ class UserSeeder extends Seeder
                 'user_role_id' => '2',
                 'user_status_id' => '1',
                 'nid' => 'A010101',
+                'gender' => 'male',
                 'phone_number' => '9999999',
                 'email' => 'admin@gmail.com',
                 'dob' => Carbon::yesterday(),
