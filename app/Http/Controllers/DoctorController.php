@@ -42,12 +42,12 @@ class DoctorController extends Controller
      */
     public function create()
     {
-        $specialty = Specialty::all()
-            ->pluck('name', 'id')
-            ->toArray();
+        $specialties = Specialty::all();
+        // ->pluck('name')
+        // ->toArray();
 
-        dd($specialty);
-        return inertia('Doctors/Create');
+        // dd($specialties);
+        return inertia('Doctors/Create', ['specialties' => $specialties]);
     }
 
     /**
