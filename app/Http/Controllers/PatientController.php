@@ -73,7 +73,7 @@ class PatientController extends Controller
     {
         try {
             Patient::create($request->validated());
-            return back()->with('success', 'Patient Added Successfully');
+            return redirect()->route('patients.index')->with('success', 'Patient Added Successfully');
         } catch (Exception $e) {
             // Log::info($e->getMessage());
             return back()->with('error', 'An error occurred');

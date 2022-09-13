@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreDoctorRequest;
 use App\Models\Doctor;
+use App\Models\Specialty;
 use App\Models\User;
 use App\Models\UserRole;
 use App\Models\UserStatus;
@@ -24,9 +25,12 @@ class DoctorController extends Controller
     {
         // $doctors = Doctor::latest()->paginate(5);
         // $doctors->load('user');
-        // dd($doctors);
 
-        $doctors = Doctor::with('user')->paginate(5);
+        $doctors = Doctor::latest()
+            ->with('user')
+            ->with('specialty')
+            ->paginate(5);
+        // dd($doctors);
 
         return inertia('Doctors/Index', ['doctors' => $doctors]);
     }
@@ -38,6 +42,11 @@ class DoctorController extends Controller
      */
     public function create()
     {
+        $specialty = Specialty::all()
+            ->pluck('name', 'id')
+            ->toArray();
+
+        dd($specialty);
         return inertia('Doctors/Create');
     }
 
@@ -78,7 +87,7 @@ class DoctorController extends Controller
                 'registration_number' => $request->registration_number
             ]);
             DB::commit();
-            return back()->with('success', 'Doctor Added Successfully');
+            return redirect()->route('doctors.index')->with('success', 'Doctor Added Successfully');
         } catch (Exception $e) {
             dd($e);
             DB::rollBack();

@@ -35,7 +35,8 @@ const form = useForm({
 const errors = ref();
 
 const submit = () => {
-    form.post('store');
+    // form.put('store');
+     form.post(route("doctors.store"));
 }
 
 </script>

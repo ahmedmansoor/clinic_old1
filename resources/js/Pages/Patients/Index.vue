@@ -51,7 +51,7 @@
                 </td>
                 <td v-bind:age="patient.age" v-if="patient.age > 1" class="px-4">
                     <span v-bind:age="patient.age">
-                        {{patient.age}} yrs
+                        {{patient.age}} y
                     </span>
                 </td>
                 <td v-bind:age="patient.age" v-else-if="patient.age == 1" class="px-4">

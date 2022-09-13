@@ -21847,7 +21847,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* PROPS */
   , ["active"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_NavLink, {
     href: "/patients",
-    active: _ctx.$page.component === 'Patients'
+    active: _ctx.$page.component.startsWith('Patients')
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [_hoisted_7, _hoisted_8];
@@ -21859,7 +21859,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* PROPS */
   , ["active"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_NavLink, {
     href: "/laboratory",
-    active: _ctx.$page.component === 'Laboratory'
+    active: _ctx.$page.component.startsWith('Laboratory')
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [_hoisted_9, _hoisted_10];
@@ -21871,7 +21871,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* PROPS */
   , ["active"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_NavLink, {
     href: "/scans",
-    active: _ctx.$page.component === 'Scans'
+    active: _ctx.$page.component.startsWith('Scans')
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [_hoisted_11, _hoisted_12];
@@ -21883,7 +21883,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* PROPS */
   , ["active"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_NavLink, {
     href: "/doctors",
-    active: _ctx.$page.component === 'Doctors'
+    active: _ctx.$page.component.startsWith('Doctors')
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [_hoisted_13, _hoisted_14];
@@ -21895,7 +21895,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* PROPS */
   , ["active"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_NavLink, {
     href: "/configuration",
-    active: _ctx.$page.component === 'Configuration'
+    active: _ctx.$page.component.startsWith('Configuration')
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [_hoisted_15, _hoisted_16];

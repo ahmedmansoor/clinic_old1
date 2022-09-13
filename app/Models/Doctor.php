@@ -31,4 +31,9 @@ class Doctor extends Model
     {
         return $this->hasMany(Session::class, 'session_id');
     }
+
+    public function specialty()
+    {
+        return $this->belongsTo(Specialty::class, 'specialty_id');
+    }
 }

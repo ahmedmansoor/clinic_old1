@@ -41,7 +41,7 @@
                 <span> Appointments </span>
             </NavLink>
 
-            <NavLink href="/patients" :active="$page.component === 'Patients'">
+            <NavLink href="/patients" :active="$page.component.startsWith('Patients')">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -61,7 +61,7 @@
 
             <NavLink
                 href="/laboratory"
-                :active="$page.component === 'Laboratory'"
+                :active="$page.component.startsWith('Laboratory')"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +80,7 @@
                 <span> Laboratory </span>
             </NavLink>
 
-            <NavLink href="/scans" :active="$page.component === 'Scans'">
+            <NavLink href="/scans" :active="$page.component.startsWith('Scans')">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -103,7 +103,7 @@
                 <span> Scans </span>
             </NavLink>
 
-            <NavLink href="/doctors" :active="$page.component === 'Doctors'">
+            <NavLink href="/doctors" :active="$page.component.startsWith('Doctors')">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -123,7 +123,7 @@
 
             <NavLink
                 href="/configuration"
-                :active="$page.component === 'Configuration'"
+                :active="$page.component.startsWith('Configuration')"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"

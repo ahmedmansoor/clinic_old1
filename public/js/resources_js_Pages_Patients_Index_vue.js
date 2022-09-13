@@ -2612,7 +2612,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           "class": "px-4"
         }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
           age: patient.age
-        }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(patient.age) + " yrs ", 9
+        }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(patient.age) + " y ", 9
         /* TEXT, PROPS */
         , _hoisted_9)], 8
         /* PROPS */

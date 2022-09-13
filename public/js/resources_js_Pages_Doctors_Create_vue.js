@@ -52,7 +52,8 @@ __webpack_require__.r(__webpack_exports__);
     var errors = (0,vue__WEBPACK_IMPORTED_MODULE_1__.ref)();
 
     var submit = function submit() {
-      form.post('store');
+      // form.put('store');
+      form.post(route("doctors.store"));
     };
 
     var __returned__ = {

@@ -19,9 +19,6 @@
                     Phone No.
                 </th>
                 <th>
-                    Emergency No.
-                </th>
-                <th>
                     Age
                 </th>
                 <th>
@@ -32,6 +29,9 @@
                 </th>
                 <th>
                     Email
+                </th>
+                <th>
+                    Specialty
                 </th>
             </tr>
         </thead>
@@ -46,12 +46,9 @@
                 <td class="px-4">
                     {{doctor.user.phone_number}}
                 </td>
-                <td class="px-4">
-                    {{doctor.user.emergency_contact_number}}
-                </td>
                 <td v-bind:age="doctor.user.age" v-if="doctor.user.age > 1" class="px-4">
                     <span v-bind:age="doctor.user.age">
-                        {{doctor.user.age}} yrs
+                        {{doctor.user.age}} y
                     </span>
                 </td>
                 <td v-bind:age="doctor.user.age" v-else-if="doctor.user.age == 1" class="px-4">
@@ -72,6 +69,9 @@
                 </td>
                 <td class="px-4">
                     {{doctor.user.email}}
+                </td>
+                <td class="px-4">
+                    {{doctor.specialty.name}}
                 </td>
                 <td>
                     <Link :href="route('doctors.edit', doctor.id)" type="button" class="p-1 px-2 bg-yellow-300 text-yellow-600">
